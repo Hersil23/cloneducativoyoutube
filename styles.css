@@ -78,3 +78,44 @@ nav {
   cursor: pointer;
   margin-right: 25px;;
 }
+.contenedor-busqueda,
+.contenedor-microfono,
+.contenedor-subir-video,
+.contenedor-notificaciones {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-right: 25px;
+}
+.tooltip {
+  position: absolute;
+  bottom: -60px;
+  background-color: #767575;
+  color: #fff;
+  font-size: 12px;
+  padding: 9px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.contenedor-busqueda:hover .tooltip,
+.contenedor-microfono:hover .tooltip,
+.contenedor-subir-video:hover .tooltip,
+.contenedor-notificaciones:hover .tooltip {
+  opacity: 1;
+}
+.contenedor-notificaciones::after {
+  position: absolute;
+  content: '23';
+  background-color: #e92525;
+  color: #fff;
+  font-size: 10px;
+  padding:  2px 4px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  top: 0;
+}
