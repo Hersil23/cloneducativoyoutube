@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 a {
   text-decoration: none;
@@ -118,4 +118,143 @@ nav {
   border-radius: 50%;
   border: 2px solid #fff;
   top: 0;
+}
+
+/*----- medidas del main -----*/
+main {
+  padding: 20px 2% ;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.lado-izquierdo {
+  background-color: rgb(255, 255, 255);
+  flex-basis: 15%;
+  position: sticky;
+  top: 80px;
+  z-index:10;
+  height: 88vh;
+  overflow: auto;
+  scrollbar-color: #7d7d7d #fbfafa;
+}
+.lado-izquierdo:hover{
+  scrollbar-color: #7d7d7d #f0f0f0;
+}
+.lado-izquierdo:not(:hover){
+  scrollbar-width: none;
+}
+.contenido-principal {
+  flex-basis: 83%;
+}
+/*estilos de del lado-izquierdo*/
+.enlaces-nav a{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+  font-size: 14px;
+}
+.enlaces-nav a img {
+  width: 25px;
+  margin-right: 20px;
+}
+.enlaces-nav hr {
+  border: 0;
+  height: 1px;
+  background-color: rgb(118, 117, 117);
+  width: 11em;
+}
+.suscripciones a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.suscripciones a img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.suscripciones h3 {
+  font-size: 12px;
+  color: #5a5a5a;
+  margin: 15px 0;
+}
+.enlaces{
+  height: 60px;
+  position: fixed;
+  top: 60px;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  margin-left: -9px;
+}
+.enlaces a {
+  background-color: #eee;
+  padding: 6px 9px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.enlaces a:first-child {
+  background-color: #000;
+  color: #fff;
+}
+
+/*---- estios de los video-----*/
+.lista-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 15px;
+  row-gap: 40px;
+  margin-top: 80px;
+}
+.lista-videos .miniatura {
+  width: 100%;
+  border-radius: 8px;
+}
+.video-perfil {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+.video-perfil img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.video-info {
+  font-size: 13px;
+  color: #5a5a5a;
+}
+.video-info .titulo {
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+}
+.video-info .autor {
+  margin: 2px 0;
+}
+.miniatura-container {
+  position: relative;
+}
+.miniatura-container div {
+  position: absolute;
+  bottom: 12px;
+  right: 6px;
+  font-size: 12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+.miniatura {
+  transition: transform 0.3s;
+}
+.miniatura:hover {
+  transform: scale(1.05);
 }
