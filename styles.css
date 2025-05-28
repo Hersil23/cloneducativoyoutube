@@ -259,3 +259,37 @@ main {
   transform: scale(1.05);
 }
 
+/* ------------------- responsive------------------- */
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .div-izquierdo, .div-medio, .div-derecho {
+    justify-content: center;
+    width: 83%;
+  }
+  
+  .barra-busqueda  {
+    display: none;
+    visibility: hidden;
+  }
+  .contenedor-busqueda {
+    display: none;
+  }
+
+
+  .lista-videos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .lado-izquierdo {
+    display: none; /* Ocultar menú lateral en móviles */
+  }
+
+  .contenido-principal {
+    flex-basis: 100%;
+  }
+}
